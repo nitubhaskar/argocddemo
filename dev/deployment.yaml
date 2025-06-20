@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: demoapp
+  name: argoapp
 spec:
   selector:
     matchLabels:
@@ -13,7 +13,7 @@ spec:
         app: demoapp
     spec:
       containers:
-      - name: demoapp
+      - name: argoapp
         image: nanajanashia/argocd-app:1.2
         ports:
         - containerPort: 8080
